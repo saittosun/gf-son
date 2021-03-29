@@ -1,0 +1,78 @@
+<div *ngIf="isLoading" class="center">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+
+<div class="container-fluid" [ngClass]="{ transparent: isLoading }">
+  <div class="row p-5">
+    <br />
+    <div class="col-6">
+      <h1 class="text-center font-weight-bold text-danger">WorkPlace</h1>
+      <br />
+      <div>
+        <mat-label class="font-weight-bold"> Question </mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="2"
+          [(ngModel)]="title"
+        >
+        </textarea>
+        <mat-divider></mat-divider>
+      </div>
+
+      <div>
+        <mat-label class="font-weight-bold"> Body: Use * For list items, --- For hearders at the beginning. </mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="2"
+          [(ngModel)]="bodyString"
+        >
+        </textarea>
+        <mat-divider></mat-divider>
+      </div>
+      <br />
+
+      <div  *ngIf="errorMessage">
+        <br />
+        <p class="error-message">{{ errorMessage }}</p>
+        <br />
+      </div>
+    </div>
+
+    <div class="col-6">
+      <h1 class="text-center font-weight-bold text-danger">Preview</h1>
+      <h3> <strong>Question: </strong> {{ title }}</h3>
+      <br />
+      <p>
+        <strong
+          >Body:</strong
+        >
+      </p>
+      <br />
+      <div *ngFor="let item of body">
+        <h4 *ngIf="item.tag === 'header'" class="font-weight-bold">
+          {{ item.element }}
+        </h4>
+        <p *ngIf="item.tag === 'paragraph'">{{ item.element }}</p>
+        <li *ngIf="item.tag === 'listItem'">{{ item.element }}</li>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-2">
+      <button class="btn btn-danger" (click)="resetForm()">Reset Form</button>
+    </div>
+
+    <div class="col-2">
+      <button class="btn btn-success" (click)="onPrewiew()">Prewiev</button>
+    </div>
+
+    <div class="col-2">
+      <button [disabled]="!body.length" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+</div>

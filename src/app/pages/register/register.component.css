@@ -1,0 +1,13 @@
+.is-invalid {
+  border: 1px solid red ;
+}
+
+.terms-cond{
+  cursor: pointer;
+}
+
+.card{
+  margin-top: 20px;
+  width: 60rem;
+  background: #dbd7d7;
+}

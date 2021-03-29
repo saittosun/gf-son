@@ -1,0 +1,113 @@
+<div *ngIf="isLoading" class="center">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+
+<div class="container-fluid" [ngClass]="{ transparent: isLoading }">
+  <div class="row p-5">
+    <br />
+    <div class="col-6">
+      <h1 class="text-center font-weight-bold text-danger">WorkPlace</h1>
+      <br />
+      <div>
+        <mat-label class="font-weight-bold"> Title </mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="2"
+          [(ngModel)]="title"
+        >
+        </textarea>
+        <mat-divider></mat-divider>
+      </div>
+
+      <div>
+        <mat-label class="font-weight-bold"> Sumary </mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="2"
+          [(ngModel)]="summary"
+        >
+        </textarea>
+        <mat-divider></mat-divider>
+      </div>
+
+      <div>
+        <mat-label class="font-weight-bold"> Body: Use * For list items, --- For hearders at the beginning. </mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="2"
+          [(ngModel)]="bodyString"
+        >
+        </textarea>
+        <mat-divider></mat-divider>
+      </div>
+      <br />
+      <input
+        style="display: none"
+        type="file"
+        (change)="onFileSelected($event)"
+        #fileInput
+        accept=""
+      />
+
+      <div  *ngIf="errorMessage">
+        <br />
+        <p class="error-message">{{ errorMessage }}</p>
+        <br />
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-2">
+          <button class="btn btn-success" (click)="fileInput.click()">
+            Pick Image
+          </button>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="date" />
+            <mat-datepicker-toggle matSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="col-2">
+          <button class="btn btn-success" (click)="onPrewiew()">Prewiev</button>
+        </div>
+
+        <div class="col-2">
+          <button [disabled]="!body.length" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <h1 class="text-center font-weight-bold text-danger">Preview</h1>
+      <h1 class="text-center font-weight-bold">{{ title }}</h1>
+      <p><strong>Summary: </strong>{{ summary }}</p>
+      <p *ngIf="date"><strong>Date: </strong>{{ date.toDateString() }}</p>
+      <p *ngIf="selectedFile"><strong>Image: </strong> {{ selectedFile.name }}</p>
+      <br />
+      <p>
+        <strong
+          >Body:</strong
+        >
+      </p>
+      <br />
+      <div *ngFor="let item of body">
+        <h2 *ngIf="item.tag === 'header'" class="font-weight-bold">
+          {{ item.element }}
+        </h2>
+        <p *ngIf="item.tag === 'paragraph'">{{ item.element }}</p>
+        <li *ngIf="item.tag === 'listItem'">{{ item.element }}</li>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,146 @@
+<div *ngIf="isLoading" class="center">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<br>
+<div class="container" [ngClass]="{'transparent': isLoading}">
+    <div class="row">
+      <div class="offset-md-3 col-md-6 card">
+          <form
+            [formGroup]="singUpForm"
+            class="text-center p-3">
+            <p class="h4 font-weight-bold">Sign Up</p>
+            <div class="form-row mb-4">
+              <div class="col">
+                <input
+                  type="text"
+                  formControlName="firstName"
+                  name="firstName"
+                  class="form-control"
+                  placeholder="First name"
+                  [ngClass]="{'is-invalid': singUpForm.controls.firstName.invalid && isSubmitted}"/>
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  formControlName="lastName"
+                  name="lastName"
+                  class="form-control"
+                  placeholder="Last name"
+                  [ngClass]="{'is-invalid': singUpForm.controls.lastName.invalid && isSubmitted}"/>
+              </div>
+            </div>
+            <input
+              type="email"
+              formControlName="email"
+              name="email"
+              class="form-control mb-4"
+              placeholder="E-mail"
+              [ngClass]="{'is-invalid': singUpForm.controls.email.invalid && isSubmitted}"/>
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control"
+              placeholder="Password"
+              [ngClass]="{'is-invalid': singUpForm.controls.password.invalid && isSubmitted}"/>
+            <!-- <small
+              id="defaultRegisterFormPasswordHelpBlock"
+              class="form-text text-muted mb-4">
+              At least 6 characters
+            </small> -->
+            <br>
+            <input
+              type="password"
+              formControlName="confirmPassword"
+              class="form-control"
+              placeholder="Confirm Password"
+              [ngClass]="{'is-invalid': isSubmitted && (singUpForm.errors || singUpForm.controls.confirmPassword.invalid)}"/>
+            <small
+              class="form-text text-muted mb-4"
+              *ngIf="singUpForm.errors && isSubmitted && singUpForm.controls.password.touched">
+              Passwords do not match!
+            </small>
+            <br>
+            <!-- <small
+              id="defaultRegisterFormPhoneHelpBlock"
+              class="form-text text-muted mb-4">
+              Optional - for two step authentication
+            </small> -->
+
+            <div class="form-group">
+              <input
+              type="text"
+              formControlName="phone"
+              name="phone"
+              placeholder="Phone number"
+              class="form-control"/>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="address"
+                name="address"
+                id="inputAddress"
+                placeholder="Adress"/>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <label for="city">City</label>
+                <input
+                  formControlName="city"
+                  type="text"
+                  name="city"
+                  class="form-control"
+                  id="inputCity"/>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select
+                  formControlName="country"
+                  class="form-control">
+                  <option
+                    *ngFor="let country of countries"
+                    [value]="country.idOrCode"
+                    selected>
+                    {{ country.name }}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputZip">Zip</label>
+                <input
+                  formControlName="zipCode"
+                  type="text"
+                  name="zipCode"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                formControlName="subscribe"
+                type="checkbox"
+                class="custom-control-input"
+              />
+              <label
+                class="custom-control-label"
+                for="defaultRegisterFormNewsletter"
+                >Subscribe to our newsletter</label
+              >
+            </div>
+            <div *ngIf="message">
+              <p style="color: red;">{{ message }}</p>
+            </div>
+            <button type="submit" class="btn btn-success btn-block" (click)="onRegistrationSubmit()">
+              Sign Up
+            </button>
+            <hr />
+            <p>
+              By clicking <em>Sign up</em> you agree to our
+              <a (click)="openAgreementDialog()" class="terms-cond">terms of service</a>
+            </p>
+          </form>
+      </div>
+    </div>
+    <br><br><br>
+</div>

@@ -1,0 +1,14 @@
+.hover-item:hover {
+  background: wheat;
+  cursor: pointer;
+}
+
+td { text-transform: lowercase; }
+
+td::first-letter {
+  text-transform: uppercase;
+}
+
+.messages{
+  margin-top: 150px;
+}

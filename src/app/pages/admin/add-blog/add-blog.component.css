@@ -1,0 +1,11 @@
+.full-width {
+  width: 100%;
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+p, li {
+  margin-bottom: 5px;
+}

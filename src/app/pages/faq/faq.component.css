@@ -1,0 +1,16 @@
+.faq-title{
+  background-color: beige;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-icon{
+  padding-top:  5px;
+  margin: 0 20px 0 20px;
+}
+
+.faq-answer{
+margin-left: 30px;
+}

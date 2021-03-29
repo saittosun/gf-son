@@ -1,0 +1,881 @@
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+::ng-deep .validation-control .mat-form-field-underline::before {
+  background: red;
+  height: 3px;
+}
+.steelblue {
+  background: rgb(168, 216, 255);
+}
+
+.route-alternative-dates button:focus {
+  box-shadow: none;
+  background-color: white;
+}
+.route-alternative-dates button:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+}
+.date-update-before::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -11%;
+  border: 19px solid transparent;
+  border-left-color: #f8f9fa;
+  transform: rotate(180deg);
+}
+
+.date-update-after::after {
+  content: '';
+  position: absolute;
+  top: -0.8px;
+  left: 90%;
+  border: 19.8px solid transparent;
+  border-left-color: #f8f9fa;
+}
+.logo {
+  width: 40px;
+  height: 30px
+}
+.logo-text {
+  font-size: 18px;
+}
+.dictionary-trips {
+  padding: 5px;
+}
+.dictionary {
+  margin-left: 0;
+  margin-right: 0;
+}
+.select-dictionary {
+  padding-top: 5px;
+}
+.select-dictionary-plus-icon {
+  font-size: 30px;
+}
+.select-dictionary-check-icon {
+  font-size: 30px;
+  color: green;
+}
+.trip-keyboard-arrow {
+  vertical-align: middle;
+}
+.material-car {
+  position: relative;
+  top: 2px;
+  left: 7px
+}
+.material-car-circle {
+  position: relative;
+  top: -3px;
+  left: -3px;
+}
+.material-person {
+  vertical-align: text-bottom;
+}
+.fa-ban {
+  color: red;
+  position: absolute;
+  left: 18px;
+  top: 2px;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+.grip-line {
+  margin-left: 0.5rem;
+  vertical-align: text-top;
+}
+.thump {
+  margin-left: 1rem;
+  vertical-align: top;
+}
+.trip-major {
+  margin-right: 0;
+  margin-left: 0;
+  padding-top: 8px;
+  /* padding-bottom: 6px; */
+}
+.trip-major-destination {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.exact-date {
+  font-size: 20px;
+}
+.toggle-icon-div button {
+  padding: 0;
+}
+.toggle-icon-div button {
+  padding: initial;
+  border: none;
+}
+.toggle-icon {
+  font-size: 40px;
+  color: white;
+}
+.vehicle-add, .vehicle-minus {
+  padding: 4px;
+}
+.car-buttons {
+  padding: 4px;
+}
+
+@media(max-width: 280px) {
+  .trip-major {
+    /* padding-bottom: 5px;     */
+    line-height: 16px;
+    /* padding-top: 4px; */
+  }
+  .trip-major-destination {
+    font-size: 12px;
+    padding-left: 5px;
+    margin-bottom: 6px;
+  }
+  .date-update-after::after {
+    left: 70%;
+    top: -1px;
+  }
+  .dates {
+    margin-right: -12px;
+    margin-left: 8px;
+  }
+  .date-update-before::before {
+    left: -32%;
+    top: 0px;
+  }
+  .date-update-before, .date-update-after {
+    font-size: 9px;
+    padding: 5px;
+  }
+  .exact-date {
+    padding-left: 12px;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  .toggle-icon {
+    font-size: 24px;
+  }
+  .toggle-icon-div {
+    margin-left: -8px;
+  }
+  .toggle-icon-div button {
+    margin-left: inherit;
+    padding: 8px;
+  }
+  .dictionary {
+    margin-left: -15px;
+  }
+  .dictionary-trips {
+    /* font-size: 9px; */
+    line-height: initial;
+    margin-bottom: 1rem;
+  }
+  .icon-groups {
+    margin-left: -7px;
+  }
+  .seat {
+    font-size: 13px;
+  }
+  .bed {
+    margin-left: inherit;
+  }
+  .car {
+    margin-left: inherit;
+  }
+  .car-material {
+    font-size: 13px;
+  }
+  .airline {
+    font-size: 12px;
+  }
+  .price {
+    margin-left: -19px;
+    font-size: 12px;
+  }
+  .select-dictionary {
+    margin-left: 14px;
+    padding-top: 2px;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-text {
+    margin-left: 3px;
+    font-size: 10px;
+  }
+  .trip-time {
+    margin-left: inherit;
+    font-size: 10px;
+    padding: 4px;
+  }
+  .trip-time-duration {
+    font-size: 12px;
+    align-self: center;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+  .select-dictionary-plus-icon {
+    font-size: 20px;
+  }
+  .select-dictionary-check-icon {
+    font-size: 20px;
+  }
+  .icon-buttons {
+    margin-left: -18px;
+    /* padding-top: 4px; */
+  }
+  .trip-time-duration {
+    padding-left: 0;
+  }
+  .passenger-vehicle-count-buttons button {
+    padding: inherit;
+  }
+  /* .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus {
+    padding: inherit;
+  } */
+  .passenger-add span, .passenger-minus span{
+    padding: 2px;
+  }
+  .grip-line {
+    display: none;
+  }
+  .material-car-circle {
+    font-size: 15px;
+    top: -8px;
+    left: -2px;
+  }
+  .select-button {
+    font-weight: 500 !important;
+    padding: 3px 0;
+    padding-left: revert;
+  }
+  .thump {
+    font-size: small;
+    margin-left: 2px;
+    margin-right: 2px;
+    vertical-align: text-top;
+  }
+}
+
+@media(min-width: 281px) and (max-width: 324px) {
+  .date-update-after::after {
+    left: 74%;
+    top: -7px;
+  }
+  .date-update-before::before {
+    left: -27%;
+    top: -6px;
+  }
+  .date-update-before, .date-update-after {
+    font-size: 9px;
+    padding: 5px;
+  }
+  .route-alternative-dates {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .dates {
+    margin-right: -10px;
+    margin-left: 10px;
+  }
+  .trip-major {
+    line-height: 16px;
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  .trip-major-destination {
+    margin-left: -8px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  .dictionary-trips {
+    font-size: 9px;
+    line-height: initial;
+    margin-bottom: 1rem;
+  }
+  .seat {
+    font-size: initial;
+  }
+  .bed {
+    margin-left: -14px;
+  }
+  .airline {
+    font-size: initial;
+  }
+  .car {
+    margin-left: -11px;
+  }
+  .car-material {
+    font-size: initial;
+  }
+  .price {
+    margin-left: -16px;
+    font-size: larger;
+  }
+  .select-dictionary {
+    margin-left: 11px;
+    padding-top: 3px;
+  }
+  .logo {
+    margin-left: -17px;
+    width: 27px;
+    height: 23px;
+  }
+  .logo-text {
+    margin-left: -13px;
+    font-size: 10px;
+  }
+  .trip-time {
+    margin-left: inherit;
+  }
+  .trip-time-duration {
+    padding-left: inherit;
+    align-self: center;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+  .exact-date {
+    padding-bottom: 8px;
+    padding-left: 12px;
+    font-size: 12px;
+  }
+  .select-dictionary-plus-icon {
+    font-size: 20px;
+  }
+  .select-dictionary-check-icon {
+    font-size: 20px;
+  }
+  .icon-buttons {
+    margin-left: -23px;
+    padding-top: 2px;
+    margin-right: 8px;
+  }
+  .toggle-icon {
+    /* vertical-align: unset; */
+    margin-left: -10px;
+    font-size: 28px;
+  }
+  .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus{
+    padding: 0! important;
+  }
+  .select-button {
+    padding: 2.5px;
+  }
+  .grip-line {
+    margin-left: 0;
+    margin-right: -7px;
+  }
+  .thump {
+    font-size: 20px;
+    margin-left: 0;
+  }
+}
+
+@media(min-width: 325px) and (max-width: 376px) {
+  .date-update-after::after {
+    left: 78%;
+    top: -5px;
+  }
+  .date-update-before::before {
+    left: -20%;
+    top: -5px;
+  }
+  .date-update-before, .date-update-after {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .dates {
+    margin-right: -12px;
+    margin-left: 8px;
+  }
+  .dictionary-trips {
+    font-size: 9px;
+    line-height: initial;
+    margin-bottom: 1rem;
+    /* padding-bottom: 1px; */
+  }
+  .logo {
+    margin-left: -17px;
+    width: 30px;
+    height: 25px;
+  }
+  .logo-text {
+    margin-left: -13px;
+    font-size: 12px;
+  }
+  .trip-major {
+    line-height: initial;
+    font-size: 13px;
+    padding-bottom: 0;
+    padding-top: 12px;
+  }
+  .trip-time {
+    margin-left: inherit;
+    font-size: x-small;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+  .trip-time-duration {
+    padding-left: 0;
+    align-self: center;
+    font-size: larger;
+  }
+  .trip-major-destination {
+    padding-bottom: 8px;
+    font-size: 13px;
+  }
+  .exact-date {
+    padding-bottom: 8px;
+    line-height: initial;
+    font-size: 13px;
+  }
+  .icon-buttons {
+    margin-left: -25px;
+    padding-top: 5px;
+  }
+  .seat {
+    font-size: 18px;
+  }
+  .bed {
+    margin-left: -10px;
+  }
+  .airline {
+    font-size: 18px;
+  }
+  .car {
+    margin-left: -8px;
+  }
+  .car-material {
+    font-size: 18px;
+  }
+  .price {
+    margin-left: -9px;
+    font-size: larger;
+  }
+  .select-dictionary {
+    margin-left: 14px;
+  }
+  .select-dictionary-plus-icon {
+    font-size: 24px;
+  }
+  .toggle-icon-div {
+    margin-left: -6px;
+  }
+  .toggle-icon {
+    vertical-align: -13px;
+    font-size: 30px;
+  }
+  .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus {
+    padding: 4px! important;
+  }
+  .material-car {
+    font-size: 20px;
+  }
+  .material-car-circle {
+    font-size: 18px;
+    top: -5px;
+    left: -2px;
+  }
+  .vehicle-minus {
+    font-size: 18px;
+    top: -5px;
+    left: -2px;
+  }
+  .select-button {
+    padding: 5.6px! important;
+  }
+}
+
+@media(min-width: 376px) and (max-width: 424px) {
+  .date-update-after::after {
+    top: -2.8px;
+    left: 81%;
+    /* border: 20.5px solid transparent; */
+  }
+  .toggle-icon {
+    vertical-align: -15px;
+    margin-left: -18px;
+    font-size: 33px;
+  }
+  .date-update-before::before {
+    top: -3px;
+    left: -21%;
+    /* border: 20.5px solid transparent; */
+  }
+  .date-update-before, .date-update-after {
+    font-size: 11px;
+    padding: 7px;
+  }
+  .trip-major {
+    line-height: 17px;
+    font-size: 14px;
+    padding-top: 14px;
+  }
+  .trip-major-destination {
+    padding-bottom: 5px;
+    font-size: unset;
+  }
+  .trip-time-duration {
+    margin-left: -23px;
+    align-self: center;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+  .dictionary-trips {
+    font-size: 11px;
+    margin-bottom: 1rem;
+    line-height: initial;
+  }
+  .seat {
+    font-size: 20px;
+  }
+  .bed {
+    margin-left: -8px;
+    margin-top: 2px;
+  }
+  .car {
+    margin-left: -8px;
+    margin-top: 2px;
+  }
+  .car-material {
+    font-size: initial;
+  }
+  .airline {
+    font-size: initial;
+  }
+  .price {
+    margin-left: -20px;
+  }
+  .select-dictionary {
+    margin-left: 14px;
+  }
+  .logo {
+    width: 30px;
+    height: 25px;
+  }
+  .logo-text {
+    padding-left: 30px;
+    font-size: 14px;
+  }
+  .exact-date {
+    padding-bottom: 5px;
+    font-size: unset;
+  }
+  .icon-buttons {
+    padding-top: 4px;
+    padding-left: 0;
+  }
+  .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus {
+    padding: 4px! important;
+  }
+  .select-button {
+    padding: 7px;
+  }
+  .select-dictionary-plus-icon {
+    font-size: 20px;
+  }
+  .select-dictionary-check-icon {
+    font-size: 20px;
+  }
+  .toggle-icon {
+    font-size: 30px;
+    margin-left: -6px;
+    vertical-align: -14px;
+  }
+  .logo-name {
+    margin-left: inherit;
+  }
+}
+
+@media(min-width: 425px) and (max-width: 499px) {
+  .date-update-after::after {
+    left: 82%;
+    top: -3px;
+  }
+  .date-update-before::before {
+    left: -20%;
+    top: -3px;
+  }
+  .date-update-before, .date-update-after {
+    line-height: 1.1rem;
+    font-size: 14px;
+    padding: 6px;
+  }
+  .trip-major {
+    line-height: initial;
+  }
+  .trip-major-destination {
+    font-size: 15px;
+  }
+  .dictionary-trips {
+    font-size: 11px;
+    line-height: initial;
+    margin-bottom: 1rem;
+  }
+  .exact-date {
+    font-size: 15px;
+  }
+  .seat {
+    font-size: 20px;
+  }
+  .bed {
+    margin-left: -6px;
+  }
+  .car {
+    margin-left: -3px;
+  }
+  .price {
+    margin-left: -20px;
+  }
+  .select-dictionary {
+    margin-left: 10px;
+  }
+  .logo {
+    margin-left: -10px;
+    width: 30px;
+    height: 25px;
+  }
+  .logo-text {
+    margin-left: -6px;
+    font-size: 15px;
+  }
+  .toggle-icon-div {
+    margin-left: -9px;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+  .trip-time-duration {
+    align-self: center;
+    margin-left: inherit;
+  }
+  .icon-groups {
+    margin-left: inherit;
+  }
+}
+
+@media(max-width: 500px) {
+  /* .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus {
+    padding: revert;
+  } */
+  .fa-grip-lines-vertical, .counter, .fa-thumbs-up{
+    display: none;
+  }
+}
+
+@media(min-width: 500px) and (max-width: 576px) {
+  .icon-buttons {
+    padding-top: 5px;
+  }
+  .date-update-after::after {
+    left: 85%;
+    top: -3px;
+  }
+  .date-update-before::before {
+    left: -15%;
+    top: -3px;
+  }
+  .date-update-before, .date-update-after {
+    line-height: 1.1rem;
+    font-size: 14px;
+  }
+  .trip-major {
+    line-height: initial;
+    padding-bottom: 1px;
+  }
+  .trip-major-destination {
+    font-size: 15px;
+  }
+  .trip-time-duration {
+    align-self: center;
+    margin-left: inherit;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+  .exact-date {
+    font-size: 15px;
+  }
+  .dictionary-trips {
+    font-size: 15px;
+    line-height: initial;
+    padding-top: 12px;
+    margin-bottom: 1rem;
+  }
+  /* .seat {
+    font-size: initial;
+  } */
+  .bed {
+    margin-left: -14px;
+  }
+  .car {
+    margin-left: -11px;
+  }
+  .price {
+    margin-left: -15px;
+  }
+  .select-dictionary {
+    margin-left: auto;
+    /* margin-bottom: -7px; */
+  }
+  .logo {
+    width: 35px;
+    height: 29px;
+    margin-left: -7px;
+  }
+  .logo-text {
+    margin-left: -2px;
+  }
+  .toggle-icon {
+    vertical-align: text-bottom;
+  }
+  .select-button {
+    padding: 7px;
+  }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+  .date-update-after::after {
+    left: 84%;
+    top: -3px;
+  }
+  .date-update-before::before {
+    left: -17%;
+    top: -3px;
+  }
+  .date-update-before, .date-update-after {
+    line-height: 1.1rem;
+    font-size: 14px;
+  }
+  .trip-major {
+    line-height: initial;
+    padding-bottom: 3px;
+  }
+  .toggle-icon-div {
+    padding-left: 5px;
+  }
+  .toggle-icon {
+    padding-bottom: 5px;
+  }
+  .icon-buttons {
+    margin-left: auto;
+    padding-top: 6px;
+  }
+  .dictionary-trips {
+    font-size: 10px;
+    line-height: initial;
+    margin-bottom: 1rem;
+  }
+  .seat {
+    font-size: initial;
+  }
+  .bed {
+    margin-left: -8px;
+  }
+  .car {
+    margin-left: -5px;
+  }
+  .price {
+    margin-left: -15px;
+  }
+  .select-dictionary {
+    margin-left: -10px;
+    margin-right: auto;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  .dictionary-trips {
+    /* font-size: 10px;
+    line-height: initial; */
+    margin-bottom: 1rem;
+  }
+  .trip-major {
+    padding-bottom: 5px;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+  .trip-major-destination {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .logo {
+    width: 33px;
+    height: 27px;
+  }
+  .logo-text {
+    font-size: 14px;
+  }
+  .trip-time {
+    font-size: 11px;
+  }
+  .trip-time-duration {
+    align-self: center;
+    margin-left: -10px;
+    font-size: larger;
+  }
+  .exact-date {
+    font-size: small;
+  }
+  .toggle-icon {
+    font-size: 30px;
+    margin-right: 1rem;
+    vertical-align: -17px;
+  }
+  .price {
+    font-size: 14px;
+  }
+  .date-update-after::after {
+    left: 84%;
+  }
+  .date-update-before::before {
+    left: -18%;
+  }
+  .dictionary {
+    font-size: 10px;
+    line-height: initial;
+  }
+  /* .seat {
+    font-size: 12px;
+  }	 */
+  .select-dictionary {
+    padding-left: 0;
+  }
+  .select-button {
+    padding: 7px;
+  }
+}
+
+
+@media(min-width: 992px) and (max-width: 1200px) {
+  .fa-ban {
+    left: 15px;
+    font-size: 18px;
+  }
+  .date-update-after::after {
+    left: 88%;
+  }
+  .date-update-before::before {
+    left: -14%;
+  }
+  .icon-buttons {
+    padding-top: 8px;
+  }
+  .exact-date {
+    padding-top: 0;
+  }
+  .trip-keyboard-arrow {
+    display: none;
+  }
+}

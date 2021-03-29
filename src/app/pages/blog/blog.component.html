@@ -1,0 +1,67 @@
+<div *ngIf="isLoading" class="center">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+
+<div class="container" [ngClass]="{ transparent: isLoading }">
+  <div class="row justify-content-end">
+    <div class="col-2">
+      <a href="https://www.greecetours.com/">
+        <img
+          src="https://greeceferries.com/wp-content/uploads/2018/10/greecetous-logo-300x90-1.png"
+          alt="GreeceTours"
+          style="height: 50px"
+        />
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <h1 class="font-weight-bold text-center">Greece Ferries Blog</h1>
+  </div>
+
+  <div *ngIf="errorMessage">
+    <p class="error-message mt-5 mb-5">{{ errorMessage }}</p>
+  </div>
+
+  <mat-grid-list
+    [cols]="breakpoint"
+    rowHeight="2:3"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile *ngFor="let blog of blogs" style="height: 900px">
+      <div>
+        <button
+          *ngIf="user && user.role === 'Admin'"
+          class="btn btn-block btn-outline-danger"
+          (click)="onBlogDelete(blog.id)"
+        >
+          Delete Blog
+        </button>
+        <div class="btn" (click)="onBlogClick(blog.id)">
+          <img
+            src="{{ blog.imageUrl }}"
+            alt="image"
+            style="height: 480px; width: 640px"
+          />
+          <div class="grid-list-item">
+            <h2>{{ blog.title }}</h2>
+            <p>{{ blog.summary }}</p>
+            <p class="font-weight-bold">{{ blog.date | date }}</p>
+          </div>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-paginator
+    (page)="handlePageEvent($event)"
+    [length]="length"
+    [pageSize]="pageSize"
+    [showFirstLastButtons]="showFirstLastButtons"
+    [pageSizeOptions]="pageSizeOptions"
+    [pageIndex]="pageIndex"
+  >
+  </mat-paginator>
+</div>
+
+<br /><br /><br /><br /><br />

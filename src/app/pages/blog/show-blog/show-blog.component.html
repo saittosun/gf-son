@@ -1,0 +1,17 @@
+<!-- <div *ngIf="isLoading" class="center">
+  <app-loading-spinner></app-loading-spinner>
+</div> -->
+
+<div class="container" [ngClass]="{ transparent: isLoading }">
+
+  <div><img [src]="blog.imageUrl" alt="image"></div>
+  <h1 class="font-weight-bold text-center"> {{blog.title}} </h1>
+  <br>
+  <p><strong>Summary:</strong> {{ blog.summary }} </p>
+  <br>
+  <div *ngFor="let item of blog.body">
+    <h2 class="font-weight-bold" *ngIf="item.tag === 'header'">{{ item.element }}</h2>
+    <p *ngIf="item.tag === 'paragraph'">{{ item.element }}</p>
+    <li *ngIf="item.tag === 'listItem'">{{ item.element }}</li>
+  </div>
+</div>

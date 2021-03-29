@@ -1,0 +1,41 @@
+.example-month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+  display: none;
+}
+
+.validation {
+  border-color: red;
+}
+
+::ng-deep .validation-control .mat-form-field-underline::before {
+  background: red;
+  height: 3px;
+ }
+
+.passengers {
+  border-bottom: 1px solid black;
+  width: fit-content;
+}
+
+.passengers h3 {
+  margin-bottom: 0;
+}
+
+.vehicle {
+  border-bottom: 1px solid black;
+  width: fit-content;
+}
+
+.vehicle h3 {
+  margin-bottom: 0;
+}
+
+::ng-deep .mat.form-field .nationality {
+  margin-bottom: 1rem;
+}
+
+@media(max-width: 540px) {
+}
