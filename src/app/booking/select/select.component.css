@@ -44,10 +44,15 @@ input[type=number] {
   height: 30px
 }
 .logo-text {
-  font-size: 18px;
+  /* font-size: 18px; */
+}
+.cancel {
+  position: absolute;
+  color: red;
 }
 .dictionary-trips {
   padding: 5px;
+  margin-bottom: 0.5rem;
 }
 .dictionary {
   margin-left: 0;

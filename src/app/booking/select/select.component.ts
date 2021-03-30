@@ -112,7 +112,7 @@ export class SelectComponent implements OnInit {
         this.readyForInfo = false;
         this.isLoading = false;
         this.searchResponse = clone(searchResponse);
-        this.searchForm = clone(this.searchForm);
+
         console.log(this.searchForm);
         this.bookingService.setRouteDateAlternatives(this.searchForm)
       },

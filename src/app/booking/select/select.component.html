@@ -23,7 +23,7 @@
                   {{ routeDateAlternatives[dicIndex].previousDate | date: "d MMM" }}
                 </button>
               </div>
-              <div class="col-2 col-lg-2 col-md-2 exact-date">
+              <div class="col-2 col-lg-2 col-md-2 exact-date align-self-center">
                 {{
                   routeDateAlternatives[dicIndex].currentDate | date: "d MMM"
                 }}
@@ -100,7 +100,7 @@
                 <div class="col-3 col-md-3 col-lg-2 icon-buttons">
                   <div class="row">
                     <div class="col-4 col-md-3 icon-groups">
-                      <span  class="material-icons" type="button" *ngIf="!hasAccommodation(dicIndex, tripIndex)">
+                      <span  class="material-icons cancel" type="button" *ngIf="!hasAccommodation(dicIndex, tripIndex)">
                         cancel
                       </span>
                       <span class="material-icons seat" type="button">
@@ -111,12 +111,14 @@
                       <span class="material-icons airline" type="button">
                         airline_seat_individual_suite
                       </span>
-                      <span class="material-icons" type="button" *ngIf="!hasVesselCabin(dicIndex, tripIndex)">
+                      <span
+                      style="top: 0;"
+                      class="material-icons cancel" type="button" *ngIf="!hasVesselCabin(dicIndex, tripIndex)">
                         cancel
                       </span>
                     </div>
                     <div class="col-4 col-md-3 car">
-                      <span class="material-icons" type="button" *ngIf="!hasVesselGarage(dicIndex, tripIndex)">
+                      <span class="material-icons cancel" type="button" *ngIf="!hasVesselGarage(dicIndex, tripIndex)">
                         cancel
                       </span>
                       <span class="material-icons car-material" type="button">
