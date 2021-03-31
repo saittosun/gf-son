@@ -220,6 +220,7 @@ input[type=number] {
     padding: 4px;
   }
   .trip-time-duration {
+    padding-left: 0;
     font-size: 12px;
     align-self: center;
   }
@@ -235,9 +236,6 @@ input[type=number] {
   .icon-buttons {
     margin-left: -18px;
     /* padding-top: 4px; */
-  }
-  .trip-time-duration {
-    padding-left: 0;
   }
   .passenger-vehicle-count-buttons button {
     padding: inherit;

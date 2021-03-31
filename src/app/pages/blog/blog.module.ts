@@ -7,6 +7,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { SharedModule } from '../../shared/moduls/shared.module';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { RouterModule, Routes } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
 
 const routes: Routes = [
   { path: '', component: BlogComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
     CommonModule,
     MatGridListModule,
     MatPaginatorModule,
+    MatCardModule,
     RouterModule.forChild(routes),
     SharedModule
   ],

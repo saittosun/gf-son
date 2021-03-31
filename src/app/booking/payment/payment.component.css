@@ -39,7 +39,7 @@
 
 .plate-card {
   padding-bottom: 8px;
-  line-height: 0.5rem;
+  /* line-height: 0.5rem; */
 }
 
 hr {
@@ -84,4 +84,4 @@ hr {
   ::ng-deep .mat-checkbox-inner-container {
       margin-top: 3px !important;
   }
-} 
+}

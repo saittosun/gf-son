@@ -1,0 +1,69 @@
+section {
+  background-image: url('https://greeceferries.com/wp-content/uploads/2020/08/diverse-friends-posing-outdoors-concept-1024x653-1.jpg');
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: contain;
+  background-position-x: center;
+}
+
+.about-title {
+  text-align: center;
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.about-title h2{
+  color: white;
+  text-transform: uppercase;
+
+}
+
+.text1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  animation: text 3s 1;
+  margin-bottom: 60px;
+  position: relative;
+  display: block;
+}
+
+.text2 {
+  font-size: 30px;
+  color: white;
+  display: block;
+  /* visibility: hidden;
+  opacity: 0; */
+}
+
+/* @keyframes cssAnimation {
+  to   { opacity: 1; }
+} */
+
+@keyframes text {
+  0%{
+    color: black;
+    margin-bottom: -40px;
+  }
+  30%{
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
+  85%{
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+}
+
+.about-text {
+  /* margin-bottom: 5rem; */
+  height: 120vh;
+}
+
+:host ::ng-deep .about-text mat-expansion-panel {
+  margin-bottom: 1rem;
+}

@@ -4,25 +4,24 @@
 
 <div *ngIf="data" class="container mt-4" [ngClass]="{ transparent: isLoading }">
   <h1 class="font-weight-bold text-center">Frequently Asked Questions</h1>
-  <div *ngFor="let faq of data; let i=index">
-    <div class="font-weight-bold faq-title " (click)="onFaqClick(i)">
-      <span *ngIf="faqArray[i]"  class="material-icons faq-icon">remove_circle_outline </span>
-      <span *ngIf="!faqArray[i]" class="material-icons faq-icon">add_circle_outline</span>
-      {{ faq.title }}
-    </div>
-    <div *ngIf="faqArray[i]" class="faq-answer">
-      <div *ngFor="let answer of faq.body">
-        <h4 class="font-weight-bold" *ngIf="answer.tag === 'header'">{{ answer.element }}</h4>
-        <p *ngIf="answer.tag === 'paragraph'">{{ answer.element }}</p>
-        <li *ngIf="answer.tag === 'listItem'">{{ answer.element }}</li>
+  <mat-accordion *ngFor="let faq of data; let i=index">
+    <mat-expansion-panel style="margin-bottom: 1rem;" class="font-weight-bold" (click)="onFaqClick(i)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ faq.title }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div *ngIf="faqArray[i]" class="faq-answer">
+        <div *ngFor="let answer of faq.body">
+          <h4 class="font-weight-bold" *ngIf="answer.tag === 'header'">{{ answer.element }}</h4>
+          <p *ngIf="answer.tag === 'paragraph'">{{ answer.element }}</p>
+          <li *ngIf="answer.tag === 'listItem'">{{ answer.element }}</li>
+        </div>
       </div>
-    </div>
-  </div>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
 
 <div  *ngIf="errorMessage">
-  <br />
   <p class="error-message">{{ errorMessage }}</p>
-  <br />
 </div>
-<br><br><br><br><br>

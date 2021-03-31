@@ -4,12 +4,12 @@
 
 <div class="container" [ngClass]="{ transparent: isLoading }">
   <div class="row justify-content-end">
-    <div class="col-2">
+    <div class="col-2 mr-2">
       <a href="https://www.greecetours.com/">
         <img
+          class="logo-tours"
           src="https://greeceferries.com/wp-content/uploads/2018/10/greecetous-logo-300x90-1.png"
           alt="GreeceTours"
-          style="height: 50px"
         />
       </a>
     </div>
@@ -23,35 +23,28 @@
     <p class="error-message mt-5 mb-5">{{ errorMessage }}</p>
   </div>
 
-  <mat-grid-list
-    [cols]="breakpoint"
-    rowHeight="2:3"
-    (window:resize)="onResize($event)"
-  >
-    <mat-grid-tile *ngFor="let blog of blogs" style="height: 900px">
-      <div>
-        <button
-          *ngIf="user && user.role === 'Admin'"
-          class="btn btn-block btn-outline-danger"
-          (click)="onBlogDelete(blog.id)"
-        >
-          Delete Blog
-        </button>
-        <div class="btn" (click)="onBlogClick(blog.id)">
-          <img
-            src="{{ blog.imageUrl }}"
-            alt="image"
-            style="height: 480px; width: 640px"
-          />
-          <div class="grid-list-item">
-            <h2>{{ blog.title }}</h2>
-            <p>{{ blog.summary }}</p>
-            <p class="font-weight-bold">{{ blog.date | date }}</p>
-          </div>
-        </div>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="row">
+    <div class="col-md-4 mb-2" *ngFor="let blog of blogs">
+      <!-- <button
+        *ngIf="user && user.role === 'Admin'"
+        class="btn btn-block btn-outline-danger"
+        (click)="onBlogDelete(blog.id)">
+        Delete Blog
+      </button> -->
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{blog.title}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="{{ blog.imageUrl }}" alt="image">
+          <mat-card-content>
+            <div class="clearfix">
+              <p class="float-left">{{blog.summary}}</p>
+              <p class="font-weight-bold float-right">{{ blog.date | date }}</p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+    </div>
+  </div>
 
   <mat-paginator
     (page)="handlePageEvent($event)"
@@ -64,4 +57,3 @@
   </mat-paginator>
 </div>
 
-<br /><br /><br /><br /><br />

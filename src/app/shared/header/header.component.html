@@ -11,7 +11,6 @@
       aria-controls="myNavbar"
       aria-expanded="false"
       (click)="onToggleNavbarCollapsed()">
-      <!-- <span class="navbar-toggler-icon"></span> -->
       <div class="bg-light line1"></div>
       <div class="bg-light line2"></div>
       <div class="bg-light line3"></div>
@@ -50,7 +49,7 @@
         </li>
         <li *ngIf="user && user.role === 'Admin'" class="nav-item user-icon-header">
           <i class="fas fa-user-circle menu-item"></i>
-          <a appDropdown #r="appDropDown" style="font-size: 1.2rem; padding-right: 4rem;"
+          <a appDropdown #r="appDropDown"
             class="nav-link menu-item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             {{user.firstName}} {{user.lastName}}

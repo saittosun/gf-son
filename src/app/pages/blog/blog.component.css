@@ -1,8 +1,10 @@
-p {
-  margin-top: 20px;
+.example-card {
+  width: fit-content;
+  height: fit-content;
 }
 
-.grid-list-item{
-  margin: 1rem;
-  padding: 2rem;
+.logo-tours {
+  padding-top: 10px;
+  width: 115%;
+  margin-right: 20px;
 }

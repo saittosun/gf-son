@@ -22,6 +22,7 @@ import * as fromApp from './store/app.reducer';
 import { AuthEffects } from './store/auth-store/auth.effects';
 import { BookingEffects } from './store/booking-store/booking.effects';
 import { PaymentAgreementModule } from './shared/base-components/payment-agreement/payment-agreement.module';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { PaymentAgreementModule } from './shared/base-components/payment-agreeme
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatExpansionModule,
     SharedModule,
     SearchModule,
     PaymentAgreementModule,

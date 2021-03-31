@@ -1,3 +1,82 @@
-<div>
-  <h1 class="text-center"><strong>Please design this page.</strong></h1>
+<section class="bg-light text-center d-none d-sm-none d-md-none d-lg-block">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="about-title">
+        <span class="text1">What is our mission?</span>
+        <span class="text2">To make everyone smile:)</span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container text-center mt-5">
+  <div class="text-center">
+    <h1 class="font-weight-bold">Who we are?</h1>
+  </div>
+  <h2>GreeceFerries.com is operated by Seretis Travel IKE, a Greek travel agency licensed by the Greek National Tourism Organisation. Seretis Travel IKE. Welcomes to Greece 20.000 travellers per year.</h2>
+  <div class="about-text">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                          (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          What is our goal?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>To provide ticket issuance and delivery services for ferries from, to and within Greece to anyone in the world.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          Our main focus
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p> is on offering quality travel consultancy to our clients, meaning honest evaluation of every service being provided.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          Our staff
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>With its 30 years of experience from 1989 until now in the tourism field, provides services that match ideally your need.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          <a href="https://www.greecetours.com/">Greecetours.com</a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p> Our sister page, offers tours in classical monuments such us Acropolis Athens, Delphi, Meteora and all the other monuments and the popular Greek islands for booking online, Santorini, Mykonos and the other Greek islands.
+        If you need any assistance with customized and tailor-made requests, our travel consultants will provide it.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          Our other web pages at your disposal:
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="d-block">
+        <a href="https://www.seretistravel.gr/">www.seretistravel.gr </a>
+        <span>in Greek Language</span>
+      </div>
+      <div>
+        <a href="https://www.greece-carrentals.com">www.greece-carrentals.com </a>
+        <span>in English Language.</span>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          Our location:
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <address>We are located in downtown Athens with easy access
+        from Omonoia Subway Station, within 100 meters
+        At 61 El.Venizelou Str. (Panepistimiou) Athens 10564.</address>
+    </mat-expansion-panel>
+  </div>
 </div>
